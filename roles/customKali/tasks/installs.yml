@@ -4,15 +4,18 @@
   file:
     state: absent
     path: "/var/lib/dpkg/lock-frontend"
+  become: true
 
 - name: Remove apt lock file
   file:
     state: absent
     path: "/var/lib/dpkg/lock"
+  become: true
 
 - name: Update but don't upgrade packages
   apt:
     update_cache: true
+  become: true
 
 # Installing packages
 - name: Install apt packages
@@ -20,3 +23,11 @@
     name: "{{ item }}"
     state: present
   loop: "{{ InitialPackages }}"
+  become: true
+
+# Installing Pip packages
+- name: Install various python packages
+  ansible.builtin.pip:
+    name: "{{ item }}"
+  loop: "{{ PipInstalls }}"
+  become: true

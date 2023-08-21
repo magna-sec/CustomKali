@@ -1,12 +1,42 @@
 ---
+
+Tools: /home/{{ ansible_user }}/Tools/
+Tools_Windows: /home/{{ ansible_user }}/Tools/Windows
+
+Tools_Linux: /home/{{ ansible_user }}/Tools/Linux
+
 InitialPackages:
 - bloodhound
 - neo4j
 - tilix
 - crackmapexec
+- remmina
+- ltrace
+- strace
+- hexedit
+- php-cli
+
+PipInstalls:
+ - pyftpdlib
+ - pyasn1
+ - dulwich
+ - updog
+ - uploadserver
+ - grip
+
 
 WindowsToolsGit:
 - https://github.com/login-securite/DonPAPI
+- https://github.com/BloodHoundAD/BloodHound
+- https://github.com/PowerShellMafia/PowerSploit
+- https://github.com/Kevin-Robertson/Powermad
+- https://github.com/S3cur3Th1sSh1t/PowerSharpPack
+- https://github.com/r3motecontrol/Ghostpack-CompiledBinaries
+- https://github.com/ParrotSec/mimikatz
+- https://github.com/dirkjanm/CVE-2020-1472
+- https://github.com/itm4n/PrivescCheck
 
 LinuxToolsGit:
-- oh hai
+- https://github.com/arthaud/git-dumper
+- https://github.com/internetwache/GitTools
+- https://github.com/nsonaniya2010/SubDomainizer

@@ -6,6 +6,7 @@
     owner: root
     group: root
     mode: '0644'
+  become: true
 
 - name: Copy bashrc for {{ ansible_user }}
   ansible.builtin.copy:
@@ -15,7 +16,6 @@
     group: "{{ ansible_user }}"
     mode: '0644'
 
-
 - name: Copy bashrc for root
   ansible.builtin.copy:
     src: bashrc
@@ -23,4 +23,5 @@
     owner: root
     group: root
     mode: '0644'
+  become: true
 

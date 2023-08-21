@@ -1,12 +1,25 @@
 # Installations
-#- include_tasks: installs.yml
+- include_tasks: installs.yml
 
 # Fix terminal
-#- include_tasks: terminal.yml
+- include_tasks: terminal.yml
 
 # Wallpaper
 - include_tasks: wallpaper.yml
 
+# Folders
+- include_tasks: folders.yml
+
 # Tooling
-- include_tasks: tooling_folders.yml
 - include_tasks: tooling_git.yml
+  vars:
+      os: "Windows"
+  loop: "{{ WindowsToolsGit }}"
+
+- include_tasks: tooling_git.yml
+  vars:
+      os: "Linux"
+  loop: "{{ LinuxToolsGit }}"
+
+- include_tasks: tooling_windows.yml
+- include_tasks: tooling_linux.yml
