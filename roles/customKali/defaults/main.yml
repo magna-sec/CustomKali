@@ -15,6 +15,7 @@ InitialPackages:
 - strace
 - hexedit
 - php-cli
+- gobuster
 
 PipInstalls:
  - pyftpdlib
