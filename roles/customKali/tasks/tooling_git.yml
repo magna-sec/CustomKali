@@ -1,0 +1,6 @@
+---
+- name: Clone Windows git repos
+  ansible.builtin.git:
+    repo: "{{ item }}"
+    dest: /home/{{ ansible_user }}/Tools/Windows/{{ item.split('/') | last }}
+  loop: "{{ WindowsToolsGit }}"

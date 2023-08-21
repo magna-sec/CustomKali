@@ -1,0 +1,26 @@
+---
+- name: Setup file for so new windows opens in PWD
+  ansible.builtin.copy:
+    src: vte.sh
+    dest: /etc/profile.d/vte.sh
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Copy bashrc for {{ ansible_user }}
+  ansible.builtin.copy:
+    src: bashrc
+    dest: /home/{{ ansible_user }}/.bashrc
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0644'
+
+
+- name: Copy bashrc for root
+  ansible.builtin.copy:
+    src: bashrc
+    dest: /root/.bashrc
+    owner: root
+    group: root
+    mode: '0644'
+

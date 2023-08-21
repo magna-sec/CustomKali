@@ -1,0 +1,5 @@
+---
+- hosts: kali
+  roles:
+    - customKali
+  become: true

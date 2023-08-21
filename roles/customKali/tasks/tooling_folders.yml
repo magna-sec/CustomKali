@@ -1,0 +1,24 @@
+---
+- name: Create a tools directory if it does not exist
+  ansible.builtin.file:
+    path: /home/{{ ansible_user }}/Tools
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    state: directory
+    mode: '0755'
+
+- name: Create a Windows tools directory if it does not exist
+  ansible.builtin.file:
+    path: /home/{{ ansible_user }}/Tools/Windows
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    state: directory
+    mode: '0755'
+
+- name: Create a Linux tools directory if it does not exist
+  ansible.builtin.file:
+    path: /home/{{ ansible_user }}/Tools/Linux
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    state: directory
+    mode: '0755'

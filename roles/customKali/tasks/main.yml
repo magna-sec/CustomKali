@@ -1,0 +1,12 @@
+# Installations
+#- include_tasks: installs.yml
+
+# Fix terminal
+#- include_tasks: terminal.yml
+
+# Wallpaper
+- include_tasks: wallpaper.yml
+
+# Tooling
+- include_tasks: tooling_folders.yml
+- include_tasks: tooling_git.yml

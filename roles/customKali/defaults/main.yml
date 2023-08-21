@@ -1,0 +1,12 @@
+---
+InitialPackages:
+- bloodhound
+- neo4j
+- tilix
+- crackmapexec
+
+WindowsToolsGit:
+- https://github.com/login-securite/DonPAPI
+
+LinuxToolsGit:
+- oh hai
