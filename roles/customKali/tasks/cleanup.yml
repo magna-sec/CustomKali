@@ -1,0 +1,5 @@
+---
+- name: Updating locate database
+  shell: |
+    updatedb
+  become: true

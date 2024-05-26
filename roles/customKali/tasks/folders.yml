@@ -27,6 +27,15 @@
     state: directory
     mode: '0755'
 
+## Generic
+- name: Create a Generic tools directory if it does not exist
+  ansible.builtin.file:
+    path: /home/{{ ansible_user }}/Tools/Generic
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    state: directory
+    mode: '0755'
+
 ### Lists
 - name: Create a lists directory if it does not exist
   ansible.builtin.file:

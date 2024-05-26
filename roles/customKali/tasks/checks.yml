@@ -1,0 +1,13 @@
+- name: Check if Havoc directory exists
+  stat:
+    path: "{{ Havoc_Dir }}"
+  register: havoc_exists
+
+- name: Check if Sliver exists
+  stat:
+    path: /usr/local/bin/sliver
+  register: sliver_stat
+
+- name: Set sliver_exists variable
+  set_fact:
+    sliver_exists: "{{ sliver_stat.stat.exists | default(false) }}"

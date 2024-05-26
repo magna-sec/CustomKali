@@ -1,5 +1,13 @@
 # Installations
-- include_tasks: installs.yml
+- include_tasks: checks.yml
+- include_tasks: snmp.yml
+#- include_tasks: installs.yml
+
+- include_tasks: sliver.yml
+  when: not sliver_exists
+
+- include_tasks: havoc.yml
+  when: not havoc_exists.stat.exists
 
 # Fix terminal
 - include_tasks: terminal.yml
@@ -23,3 +31,9 @@
 
 - include_tasks: tooling_windows.yml
 - include_tasks: tooling_linux.yml
+- include_tasks: tooling_generic.yml
+
+- include_tasks: docker.yml
+- include_tasks: docker_images.yml
+
+- include_tasks: cleanup.yml

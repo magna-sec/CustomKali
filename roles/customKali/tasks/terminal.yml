@@ -1,13 +1,4 @@
 ---
-- name: Setup file for so new windows opens in PWD
-  ansible.builtin.copy:
-    src: vte.sh
-    dest: /etc/profile.d/vte.sh
-    owner: root
-    group: root
-    mode: '0644'
-  become: true
-
 - name: Copy bashrc for {{ ansible_user }}
   ansible.builtin.copy:
     src: bashrc
@@ -23,5 +14,13 @@
     owner: root
     group: root
     mode: '0644'
+  become: true
+
+
+- name: Change terminal fontsize
+  lineinfile:
+    path: "{{ Terminal_Settings }}"
+    regexp: '^fontSize=10$'
+    line: 'fontSize=12'
   become: true
 
