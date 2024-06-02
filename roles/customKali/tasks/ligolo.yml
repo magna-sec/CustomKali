@@ -1,0 +1,46 @@
+---
+############## Ligolo-ng
+- name: Create a Ligolo-ng directory
+  ansible.builtin.file:
+    path: "{{ Tools_Generic }}/ligolo"
+    state: directory
+    mode: '0755'
+
+## Windows
+- name: Create a Ligolo-ng Windows directory
+  ansible.builtin.file:
+    path: "{{ Tools_Generic }}/ligolo/windows"
+    state: directory
+    mode: '0755'
+
+- name: Unarchiving Ligolo-ng Windows agent
+  ansible.builtin.unarchive:
+    src: "https://github.com/nicocha30/ligolo-ng/releases/download/v0.5.2/ligolo-ng_agent_0.5.2_windows_amd64.zip"
+    dest: "{{ Tools_Generic }}/ligolo/windows/"
+    remote_src: yes
+
+- name: Unarchiving Ligolo-ng Windows proxy
+  ansible.builtin.unarchive:
+    src: "https://github.com/nicocha30/ligolo-ng/releases/download/v0.5.2/ligolo-ng_proxy_0.5.2_windows_amd64.zip"
+    dest: "{{ Tools_Generic }}/ligolo/windows/"
+    remote_src: yes
+
+
+## Linux
+- name: Create a Ligolo-ng Linux directory
+  ansible.builtin.file:
+    path: "{{ Tools_Generic }}/ligolo/windows"
+    state: directory
+    mode: '0755'
+
+- name: Unarchiving Ligolo-ng Linux agent
+  ansible.builtin.unarchive:
+    src: "https://github.com/nicocha30/ligolo-ng/releases/download/v0.5.2/ligolo-ng_agent_0.5.2_linux_amd64.tar.gz"
+    dest: "{{ Tools_Generic }}/ligolo/windows/"
+    remote_src: yes
+
+- name: Unarchiving Ligolo-ng Linux proxy
+  ansible.builtin.unarchive:
+    src: "https://github.com/nicocha30/ligolo-ng/releases/download/v0.5.2/ligolo-ng_proxy_0.5.2_linux_amd64.tar.gz"
+    dest: "{{ Tools_Generic }}/ligolo/windows/"
+    remote_src: yes

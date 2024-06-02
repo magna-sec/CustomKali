@@ -1,13 +1,9 @@
 # Installations
 - include_tasks: checks.yml
-- include_tasks: snmp.yml
-#- include_tasks: installs.yml
+- include_tasks: installs.yml
 
 - include_tasks: sliver.yml
   when: not sliver_exists
-
-- include_tasks: havoc.yml
-  when: not havoc_exists.stat.exists
 
 # Fix terminal
 - include_tasks: terminal.yml
@@ -19,6 +15,7 @@
 - include_tasks: folders.yml
 
 # Tooling
+############# Gits
 - include_tasks: tooling_git.yml
   vars:
       os: "Windows"
@@ -29,11 +26,29 @@
       os: "Linux"
   loop: "{{ LinuxToolsGit }}"
 
-- include_tasks: tooling_windows.yml
-- include_tasks: tooling_linux.yml
-- include_tasks: tooling_generic.yml
+############# Downloads
+- include_tasks: tooling_download.yml
+  vars:
+      os: "Windows"
+  loop: "{{ WindowsToolsDownloads }}"
+
+- include_tasks: tooling_download.yml
+  vars:
+      os: "Linux"
+  loop: "{{ LinuxToolsDownloads }}"
+
+############# Compressed
+- include_tasks: tooling_compressed.yml
+  vars:
+      os: "Windows"
+  loop: "{{ WindowsToolsCompressed }}"
+
+- include_tasks: ligolo.yml
 
 - include_tasks: docker.yml
 - include_tasks: docker_images.yml
+  loop: "{{ DockerImages }}"
+
+- include_tasks: snmp.yml
 
 - include_tasks: cleanup.yml

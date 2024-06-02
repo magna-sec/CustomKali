@@ -1,5 +1,5 @@
 ---
-- name: Pull default Docker image
+- name: Pulling {{ item }} Docker image
   community.docker.docker_image:
-    name: "woahbase/alpine-python2"
+    name: "{{ item }}"
     source: pull

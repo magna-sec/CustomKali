@@ -31,3 +31,13 @@
     name: "{{ item }}"
   loop: "{{ PipInstalls }}"
   become: true
+
+# Install pipx packages
+- name: Ensure directory where pipx stores apps is in your PATH environment variable.
+  shell: |
+    pipx ensurepath
+
+- name: Install {{ item }} using pipx
+  ansible.builtin.command:
+    cmd: pipx install {{ item }}
+  loop: "{{ PipxInstalls }}"
