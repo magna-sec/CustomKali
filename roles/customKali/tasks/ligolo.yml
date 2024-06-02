@@ -29,18 +29,18 @@
 ## Linux
 - name: Create a Ligolo-ng Linux directory
   ansible.builtin.file:
-    path: "{{ Tools_Generic }}/ligolo/windows"
+    path: "{{ Tools_Generic }}/ligolo/linux"
     state: directory
     mode: '0755'
 
 - name: Unarchiving Ligolo-ng Linux agent
   ansible.builtin.unarchive:
     src: "https://github.com/nicocha30/ligolo-ng/releases/download/v0.5.2/ligolo-ng_agent_0.5.2_linux_amd64.tar.gz"
-    dest: "{{ Tools_Generic }}/ligolo/windows/"
+    dest: "{{ Tools_Generic }}/ligolo/linux/"
     remote_src: yes
 
 - name: Unarchiving Ligolo-ng Linux proxy
   ansible.builtin.unarchive:
     src: "https://github.com/nicocha30/ligolo-ng/releases/download/v0.5.2/ligolo-ng_proxy_0.5.2_linux_amd64.tar.gz"
-    dest: "{{ Tools_Generic }}/ligolo/windows/"
+    dest: "{{ Tools_Generic }}/ligolo/linux/"
     remote_src: yes
