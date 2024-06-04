@@ -34,6 +34,7 @@ PipInstalls:
  - updog
  - uploadserver
  - grip
+ - smbclientng
 
 PipxInstalls:
  - git+https://github.com/Pennyw0rth/NetExec
