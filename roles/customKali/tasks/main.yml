@@ -14,6 +14,11 @@
 # Folders
 - include_tasks: folders.yml
 
+# Lists
+- include_tasks: lists.yml
+  loop: "{{ ListsGit }}"
+
+
 # Tooling
 ############# Gits
 - include_tasks: tooling_git.yml
