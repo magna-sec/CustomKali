@@ -37,7 +37,7 @@
   shell: |
     pipx ensurepath
 
-- name: Install {{ item }} using pipx
-  ansible.builtin.command:
-    cmd: pipx install {{ item }}
-  loop: "{{ PipxInstalls }}"
+#- name: Install {{ item }} using pipx
+#  ansible.builtin.command:
+#    cmd: pipx install {{ item }}
+#  loop: "{{ PipxInstalls }}"

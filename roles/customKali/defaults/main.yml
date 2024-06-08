@@ -35,8 +35,8 @@ PipInstalls:
  - uploadserver
  - grip
 
-PipxInstalls:
- - git+https://github.com/Pennyw0rth/NetExec
+#PipxInstalls:
+# - git+https://github.com/Pennyw0rth/NetExec
 
 DockerImages:
  - postgres:13.2
