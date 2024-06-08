@@ -1,0 +1,14 @@
+---
+############## Check for path, if no path -> clone
+- name: Checking for {{ item.split('/') | last }}
+  stat: 
+    path: "{{ Lists }}/{{ item.split('/') | last }}"
+  register: git_path
+
+- name: Cloning {{ item.split('/') | last }}
+  ansible.builtin.git:
+    repo: "{{ item }}"
+    dest: "{{ Lists }}/{{ item.split('/') | last }}"
+    single_branch: yes
+    version: master
+  when: git_path.stat.exists == false

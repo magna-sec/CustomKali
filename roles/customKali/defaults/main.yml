@@ -5,7 +5,7 @@ Tools_Windows: /home/{{ ansible_user }}/Tools/Windows
 Tools_Linux: /home/{{ ansible_user }}/Tools/Linux
 Tools_Generic: /home/{{ ansible_user }}/Tools/Generic
 
-Lists: /home/{{ ansible_user }}/Lists
+Lists: /home/{{ ansible_user }}/Lists/
 
 Terminal_Settings: /etc/xdg/qterminal.org/qterminal.ini
 
@@ -38,6 +38,7 @@ PipInstalls:
  - updog
  - uploadserver
  - grip
+ - smbclientng
 
 #PipxInstalls:
 # - git+https://github.com/Pennyw0rth/NetExec
@@ -48,6 +49,10 @@ DockerImages:
  - woahbase/alpine-python2
  - specterops/bloodhound
 
+
+ListsGit:
+- https://github.com/danielmiessler/SecLists
+- https://github.com/insidetrust/statistically-likely-usernames
 
 ############# Gits
 LinuxToolsGit:
