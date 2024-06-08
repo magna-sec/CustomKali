@@ -10,6 +10,5 @@ This Does:
 This repo will probably become a dumping ground for "DON'T FORGET THAT GITHUB"
 
 To Do:
- - Make git/download etc just 1 yml file each, pass the folder
  - Burp Pro with variable for license
  - Adjust terminal font size

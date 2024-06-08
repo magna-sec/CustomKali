@@ -1,11 +1,11 @@
 - name: Create a {{ item.split('/')[-1].split('.')[0] }} directory
   ansible.builtin.file:
-    path: "{{ Tools }}/{{ os }}/{{ item.split('/')[-1].split('.')[0] }}"
+    path: "{{ dir }}/{{ item.split('/')[-1].split('.')[0] }}"
     state: directory
     mode: '0755'
 
 - name: Unarchiving {{ item.split('/')[-1].split('.')[0] }}
   ansible.builtin.unarchive:
     src: "{{ item }}"
-    dest: "{{ Tools }}/{{ os }}/{{ item.split('/')[-1].split('.')[0] }}"
+    dest: "{{ dir }}/{{ item.split('/')[-1].split('.')[0] }}"
     remote_src: yes

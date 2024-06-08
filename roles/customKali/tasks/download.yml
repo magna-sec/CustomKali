@@ -3,4 +3,4 @@
 - name: Downloading {{ item.split('/') | last }}
   get_url:
     url: "{{ item }}"
-    dest: "{{ Tools }}/{{ os }}/{{ item.split('/')[-1] }}"
+    dest: "{{ dir }}/{{ item.split('/')[-1] }}"

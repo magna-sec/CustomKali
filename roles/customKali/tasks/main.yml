@@ -16,36 +16,38 @@
 
 # Lists
 ############# Gits
-- include_tasks: lists_git.yml
+- include_tasks: git.yml
+  vars:
+    dir: "{{ Lists }}"
   loop: "{{ ListsGit }}"
 
 # Tooling
 ############# Gits
-- include_tasks: tooling_git.yml
+- include_tasks: git.yml
   vars:
-      os: "Windows"
+      dir: "{{ Tools_Windows }}"
   loop: "{{ WindowsToolsGit }}"
 
-- include_tasks: tooling_git.yml
+- include_tasks: git.yml
   vars:
-      os: "Linux"
+      dir: "{{ Tools_Linux }}"
   loop: "{{ LinuxToolsGit }}"
 
 ############# Downloads
-- include_tasks: tooling_download.yml
+- include_tasks: download.yml
   vars:
-      os: "Windows"
+      dir: "{{ Tools_Windows }}"
   loop: "{{ WindowsToolsDownloads }}"
 
-- include_tasks: tooling_download.yml
+- include_tasks: download.yml
   vars:
-      os: "Linux"
+      dir: "{{ Tools_Linux }}"
   loop: "{{ LinuxToolsDownloads }}"
 
 ############# Compressed
-- include_tasks: tooling_compressed.yml
+- include_tasks: compressed.yml
   vars:
-      os: "Windows"
+      dir: "{{ Tools_Windows }}"
   loop: "{{ WindowsToolsCompressed }}"
 
 - include_tasks: docker.yml
