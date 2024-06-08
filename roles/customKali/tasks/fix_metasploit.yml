@@ -1,0 +1,17 @@
+- name: Copy msfconsole.rc for {{ ansible_user }}
+  ansible.builtin.copy:
+    src: msfconsole.rc
+    dest: /home/{{ ansible_user }}/.msf4/msfconsole.rc
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    mode: '0600'
+
+
+- name: Copy msfconsole.rc for root
+  ansible.builtin.copy:
+    src: msfconsole.rc
+    dest: /root/.msf4/msfconsole.rc
+    owner: "root"
+    group: "root"
+    mode: '0600'
+  become: true

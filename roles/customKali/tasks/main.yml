@@ -48,5 +48,6 @@
   loop: "{{ DockerImages }}"
 
 - include_tasks: snmp.yml
+- include_tasks: fix_metasploit.yml
 
 - include_tasks: cleanup.yml

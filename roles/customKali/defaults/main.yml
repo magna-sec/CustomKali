@@ -25,6 +25,8 @@ InitialPackages:
 - python3-setuptools # Docker End
 - mono-devel
 - pipx
+- ligolo-ng
+- netexec
 
 
 PipInstalls:
