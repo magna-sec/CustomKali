@@ -5,6 +5,8 @@ Tools_Windows: /home/{{ ansible_user }}/Tools/Windows
 Tools_Linux: /home/{{ ansible_user }}/Tools/Linux
 Tools_Generic: /home/{{ ansible_user }}/Tools/Generic
 
+Lists: /home/{{ ansible_user }}/Lists
+
 Terminal_Settings: /etc/xdg/qterminal.org/qterminal.ini
 
 InitialPackages:
@@ -66,6 +68,10 @@ WindowsToolsGit:
 GenericToolsGit:
 - https://github.com/arthaud/git-dumper
 
+ListsGit:
+- https://github.com/danielmiessler/SecLists
+- https://github.com/insidetrust/statistically-likely-usernames
+
 
 ############# Downloads
 LinuxToolsDownloads:
@@ -80,6 +86,9 @@ WindowsToolsDownloads:
 - https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1
 - https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer32.exe
 - https://github.com/itm4n/PrintSpoofer/releases/download/v1.0/PrintSpoofer64.exe
+
+ListDownloads:
+- 
 
 
 ############# Compressed

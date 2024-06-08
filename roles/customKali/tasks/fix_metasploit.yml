@@ -1,3 +1,11 @@
+- name: Create a .msf4 directory if it does not exist user
+  ansible.builtin.file:
+    path: /home/{{ ansible_user }}/.msf4
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+    state: directory
+    mode: '0755'
+
 - name: Copy msfconsole.rc for {{ ansible_user }}
   ansible.builtin.copy:
     src: msfconsole.rc
@@ -6,6 +14,14 @@
     group: "{{ ansible_user }}"
     mode: '0600'
 
+- name: Create a .msf4 directory if it does not exist root
+  ansible.builtin.file:
+    path: /root/.msf4
+    owner: "root"
+    group: "root"
+    state: directory
+    mode: '0755'
+  become: true 
 
 - name: Copy msfconsole.rc for root
   ansible.builtin.copy:
