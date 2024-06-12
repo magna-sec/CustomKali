@@ -54,6 +54,7 @@ DockerImages:
 ListsGit:
 - https://github.com/danielmiessler/SecLists
 - https://github.com/insidetrust/statistically-likely-usernames
+- https://github.com/ignis-sec/Pwdb-Public
 
 ############# Gits
 LinuxToolsGit:
