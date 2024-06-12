@@ -39,6 +39,7 @@ PipInstalls:
  - uploadserver
  - grip
  - smbclientng
+ - bopscrk
 
 #PipxInstalls:
 # - git+https://github.com/Pennyw0rth/NetExec
