@@ -27,9 +27,9 @@
 
 # Installing Pip packages
 - name: Install various python packages
-  ansible.builtin.pip:
+  community.general.pipx:
     name: "{{ item }}"
-  loop: "{{ PipInstalls }}"
+  with_items: "{{ PipInstalls }}"
   become: true
 
 # Install pipx packages
@@ -37,7 +37,3 @@
   shell: |
     pipx ensurepath
 
-#- name: Install {{ item }} using pipx
-#  ansible.builtin.command:
-#    cmd: pipx install {{ item }}
-#  loop: "{{ PipxInstalls }}"

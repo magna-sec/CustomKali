@@ -2,8 +2,8 @@
 - include_tasks: checks.yml
 - include_tasks: installs.yml
 
-- include_tasks: sliver.yml
-  when: not sliver_exists
+#- include_tasks: sliver.yml
+#  when: not sliver_exists
 
 # Fix terminal
 - include_tasks: terminal.yml
@@ -50,9 +50,11 @@
       dir: "{{ Tools_Windows }}"
   loop: "{{ WindowsToolsCompressed }}"
 
-- include_tasks: docker.yml
 - include_tasks: docker_images.yml
   loop: "{{ DockerImages }}"
+
+- include_tasks: havoc.yml
+  when: not havoc_exists
 
 - include_tasks: snmp.yml
 - include_tasks: fix_metasploit.yml

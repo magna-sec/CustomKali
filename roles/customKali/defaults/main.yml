@@ -10,36 +10,72 @@ Lists: /home/{{ ansible_user }}/Lists/
 Terminal_Settings: /etc/xdg/qterminal.org/qterminal.ini
 
 InitialPackages:
-- remmina
+# - remmina # Currently removed from repo, should be back soon
 - ltrace
 - strace
 - hexedit
 - php-cli
+- jq
 - gobuster
-- havoc
+- xfreerdp
+- certipy-ad
+- coercer
+- mssqlpwner
+- jd-gui
+#- havoc
+- sliver
 - snmp-mibs-downloader
-- apt-transport-https # Docker Start
-- ca-certificates
-- curl
-- software-properties-common
-- python3-pip
-- virtualenv
-- python3-setuptools # Docker End
 - mono-devel
 - pipx
 - ligolo-ng
 - netexec
+- docker.io
+# For Havoc C2 Start
+- git
+- build-essential
+- apt-utils
+- cmake
+- golang-go
+- libfontconfig1
+- libglu1-mesa-dev
+- libgtest-dev
+- libspdlog-dev
+- libboost-all-dev
+- libncurses5-dev
+- libgdbm-dev
+- libssl-dev
+- libreadline-dev
+- libffi-dev
+- libsqlite3-dev
+- libbz2-dev
+- mesa-common-dev
+- qtbase5-dev
+- qtchooser
+- qt5-qmake
+- qtbase5-dev-tools
+- libqt5websockets5
+- libqt5websockets5-dev
+- qtdeclarative5-dev
+- qtbase5-dev
+- libqt5websockets5-dev
+- python3-dev
+- libboost-all-dev
+- gcc-mingw-w64
+- nasm
+# For Havoc C2 End
 
 
 PipInstalls:
  - pyftpdlib
- - pyasn1
+# - pyasn1
+ - ldeep
  - dulwich
  - updog
  - uploadserver
  - grip
  - smbclientng
  - bopscrk
+ - smbclientng
 
 #PipxInstalls:
 # - git+https://github.com/Pennyw0rth/NetExec
@@ -63,7 +99,7 @@ LinuxToolsGit:
 - https://github.com/nsonaniya2010/SubDomainizer
 
 WindowsToolsGit:
-  #- https://github.com/login-securite/DonPAPI
+- https://github.com/login-securite/DonPAPI
 - https://github.com/PowerShellMafia/PowerSploit
 - https://github.com/Kevin-Robertson/Powermad
 - https://github.com/S3cur3Th1sSh1t/PowerSharpPack
@@ -71,6 +107,8 @@ WindowsToolsGit:
 - https://github.com/ParrotSec/mimikatz
 - https://github.com/dirkjanm/CVE-2020-1472
 - https://github.com/itm4n/PrivescCheck
+- https://github.com/BeichenDream/GodPotato
+- https://github.com/tylerdotrar/SigmaPotato
 
 GenericToolsGit:
 - https://github.com/arthaud/git-dumper
