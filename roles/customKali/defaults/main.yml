@@ -63,6 +63,7 @@ InitialPackages:
 - gcc-mingw-w64
 - nasm
 # For Havoc C2 End
+- semgrep
 
 
 PipInstalls:
