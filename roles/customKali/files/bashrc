@@ -3,7 +3,7 @@
 # for examples
 
 # Set title to "Peppermint Terminal"
-PROMPT_COMMAND='echo -ne "\033]0;Peppermint Terminal\007"'
+PROMPT_COMMAND='echo -ne "\033]0;The Terminal\007"'
 
 # System-wide .bashrc file for interactive bash(1) shells.
 
