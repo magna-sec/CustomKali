@@ -67,7 +67,6 @@ InitialPackages:
 
 PipInstalls:
  - pyftpdlib
-# - pyasn1
  - ldeep
  - dulwich
  - updog
@@ -75,10 +74,7 @@ PipInstalls:
  - grip
  - smbclientng
  - bopscrk
- - smbclientng
 
-#PipxInstalls:
-# - git+https://github.com/Pennyw0rth/NetExec
 
 DockerImages:
  - postgres:13.2
