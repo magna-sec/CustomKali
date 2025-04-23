@@ -10,14 +10,14 @@ Lists: /home/{{ ansible_user }}/Lists/
 Terminal_Settings: /etc/xdg/qterminal.org/qterminal.ini
 
 InitialPackages:
-# - remmina # Currently removed from repo, should be back soon
+- remmina
 - ltrace
 - strace
 - hexedit
 - php-cli
 - jq
 - gobuster
-- xfreerdp3
+- freerdp3-dev
 - certipy-ad
 - coercer
 - mssqlpwner
