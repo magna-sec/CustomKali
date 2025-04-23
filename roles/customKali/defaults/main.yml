@@ -17,7 +17,7 @@ InitialPackages:
 - php-cli
 - jq
 - gobuster
-- xfreerdp
+- xfreerdp3
 - certipy-ad
 - coercer
 - mssqlpwner
