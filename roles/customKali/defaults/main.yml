@@ -74,6 +74,7 @@ PipInstalls:
  - grip
  - smbclientng
  - bopscrk
+ - defaultcreds-cheat-sheet
 
 
 DockerImages:
