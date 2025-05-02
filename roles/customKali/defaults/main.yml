@@ -109,6 +109,7 @@ WindowsToolsGit:
 
 GenericToolsGit:
 - https://github.com/arthaud/git-dumper
+- https://github.com/unode/firefox_decrypt
 
 ListsGit:
 - https://github.com/danielmiessler/SecLists
