@@ -30,6 +30,7 @@ InitialPackages:
 - ligolo-ng
 - netexec
 - docker.io
+- bloodyad
 # For Havoc C2 Start
 - git
 - build-essential
