@@ -76,6 +76,7 @@ PipInstalls:
  - smbclientng
  - bopscrk
  - defaultcreds-cheat-sheet
+ - flask-unsign-wordlist
 
 
 DockerImages:
