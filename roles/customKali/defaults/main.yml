@@ -76,8 +76,7 @@ PipInstalls:
  - smbclientng
  - bopscrk
  - defaultcreds-cheat-sheet
- - flask-unsign-wordlist
-
+ - flask-unsign
 
 DockerImages:
  - postgres:13.2
