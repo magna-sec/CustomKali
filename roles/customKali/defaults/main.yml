@@ -17,6 +17,7 @@ InitialPackages:
 - php-cli
 - jq
 - ntpsec-ntpdate
+- rdate
 - gobuster
 - freerdp3-dev
 - certipy-ad
