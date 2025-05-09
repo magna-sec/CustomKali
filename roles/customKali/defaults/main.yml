@@ -77,6 +77,7 @@ PipInstalls:
  - bopscrk
  - defaultcreds-cheat-sheet
  - flask-unsign
+ - git+https://github.com/ShutdownRepo/pywhisker
 
 DockerImages:
  - postgres:13.2
