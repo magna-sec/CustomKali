@@ -16,6 +16,7 @@ InitialPackages:
 - hexedit
 - php-cli
 - jq
+- ntpsec-ntpdate
 - gobuster
 - freerdp3-dev
 - certipy-ad
