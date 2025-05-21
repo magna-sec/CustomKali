@@ -22,6 +22,7 @@ InitialPackages:
 - freerdp3-dev
 - certipy-ad
 - coercer
+- gdb
 - mssqlpwner
 - jd-gui
 #- havoc
