@@ -23,6 +23,7 @@ InitialPackages:
 - certipy-ad
 - coercer
 - gdb
+- msitools
 - mssqlpwner
 - jd-gui
 #- havoc
