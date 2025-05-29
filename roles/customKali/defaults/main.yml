@@ -12,6 +12,7 @@ Terminal_Settings: /etc/xdg/qterminal.org/qterminal.ini
 InitialPackages:
 - remmina
 - ltrace
+- tilix
 - strace
 - hexedit
 - php-cli
