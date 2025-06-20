@@ -123,6 +123,7 @@ WindowsToolsGit:
 GenericToolsGit:
 - https://github.com/arthaud/git-dumper
 - https://github.com/unode/firefox_decrypt
+- https://github.com/musana/CF-Hero
 
 ListsGit:
 - https://github.com/danielmiessler/SecLists
