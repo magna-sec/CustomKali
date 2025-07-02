@@ -83,6 +83,7 @@ PipInstalls:
  - defaultcreds-cheat-sheet
  - flask-unsign
  - git+https://github.com/ShutdownRepo/pywhisker
+ - git+https://github.com/garrettfoster13/sccmhunter/
  - dploot
 
 DockerImages:
