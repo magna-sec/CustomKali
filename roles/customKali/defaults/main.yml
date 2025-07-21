@@ -17,6 +17,7 @@ InitialPackages:
 - hexedit
 - php-cli
 - jq
+- npm
 - ntpsec-ntpdate
 - rdate
 - gobuster
