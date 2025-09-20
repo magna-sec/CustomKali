@@ -53,9 +53,6 @@
 - include_tasks: docker_images.yml
   loop: "{{ DockerImages }}"
 
-- include_tasks: havoc.yml
-  when: not havoc_exists
-
 - include_tasks: snmp.yml
 - include_tasks: fix_metasploit.yml
 
