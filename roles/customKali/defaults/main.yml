@@ -29,7 +29,6 @@ InitialPackages:
 - mssqlpwner
 - jd-gui
 - bloodhound
-#- havoc
 - sliver
 - snmp-mibs-downloader
 - mono-devel
@@ -53,6 +52,7 @@ PipInstalls:
  - git+https://github.com/ShutdownRepo/pywhisker
  - git+https://github.com/garrettfoster13/sccmhunter/
  - dploot
+ - git+https://github.com/p0dalirius/smbclient-ng
 
 DockerImages:
  - postgres:13.2
