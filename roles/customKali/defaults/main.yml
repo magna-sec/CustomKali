@@ -19,6 +19,7 @@ InitialPackages:
 - jq
 - npm
 - ntpsec-ntpdate
+- isc-dhcp-client
 - rdate
 - gobuster
 - freerdp3-dev
