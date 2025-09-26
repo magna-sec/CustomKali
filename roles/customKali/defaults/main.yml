@@ -23,7 +23,6 @@ InitialPackages:
 - rdate
 - gobuster
 - freerdp3-dev
-- certipy-ad
 - coercer
 - gdb
 - msitools
@@ -55,6 +54,7 @@ PipInstalls:
  - git+https://github.com/garrettfoster13/sccmhunter/
  - dploot
  - git+https://github.com/p0dalirius/smbclient-ng
+ - git+https://github.com/ly4k/Certipy
 
 DockerImages:
  - postgres:13.2
