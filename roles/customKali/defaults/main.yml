@@ -38,6 +38,7 @@ InitialPackages:
 - netexec
 - docker.io
 - bloodyad
+- tailscale
 
 PipInstalls:
  - pyftpdlib
